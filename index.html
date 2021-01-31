@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dev.finance$</title>
 
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -18,35 +18,44 @@
   <body>
 
     <header>
-      <h1 id="logo">dev.finance$</h1>
+      <img src="./assets/logo.svg" alt="Logo Dev Finance">
     </header>
 
     <main class="container">
 
       <section id="balance">
-        <h2>Balanço</h2>
+        <h2 class="sr-only">Balanço</h2>
 
         <div class="card">
-          <h3>Entrada</h3>
+          <h3>
+            <span>Entrada</span>
+            <img src="./assets/income.svg" alt="Imagem de entradas">
+          </h3>
 
           <p>R$ 5.000,00</p>
         </div>
 
         <div class="card">
-          <h3>Saída</h3>
+          <h3>
+            <span>Saídas</span>
+            <img src="./assets/expense.svg" alt="Imagem de saídas">
+          </h3>
 
           <p>R$ 2.000,00</p>
         </div>
 
         <div class="card total">
-          <h3>Total</h3>
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Imagem de total">
+          </h3>
 
           <p>R$ 3.000,00</p>
         </div>
       </section>
 
       <section id="transaction">
-        <h2>Transações</h2>
+        <h2 class="sr-only">Transações</h2>
 
         <table id="data-table">
           <thead>
