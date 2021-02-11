@@ -13,11 +13,11 @@ const Modal = {
 
 const Storage = {
   get() {
-    return JSON.parse(localStorage.getItem("dev.finances:transaction")) || [];
+    return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
   },
   set(transactions) {
     localStorage.setItem(
-      "dev.finances:transaction",
+      "dev.finances:transactions",
       JSON.stringify(transactions)
     );
   },
@@ -201,13 +201,11 @@ const Form = {
 
 const App = {
   init() {
-    Transaction.all.forEach((transaction, index) => {
-      DOM.addTransaction(transaction, index);
-
-      Storage.set(Transaction.all);
-    });
+    Transaction.all.forEach(DOM.addTransaction);
 
     DOM.updateBalance();
+
+    Storage.set(Transaction.all);
   },
 
   reload() {
